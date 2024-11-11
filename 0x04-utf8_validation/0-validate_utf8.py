@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" A python script that determines if a given data set represents a valid UTF-8 encoding """
+""" A python script that validates data as valid UTF-8 encoding """
 
 from typing import Union
+
 
 def validUTF8(data):
     """ Returns True if data is valid UTF-8 encoding, else returns False """
