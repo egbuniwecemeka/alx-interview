@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ A python script that determines if a given data set represents a valid UTF-8 encoding """
 
 from typing import Union
