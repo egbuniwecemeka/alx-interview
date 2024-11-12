@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ A python script that validates data as valid UTF-8 encoding """
 
+
 def validUTF8(data):
     """ Returns True if data is valid UTF-8 encoding, else returns False """
     num_bytes = 0
