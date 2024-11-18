@@ -52,4 +52,16 @@ To implement a queue, use collections.deque which was designed to have fast appe
 
 List Comprehensions
 
-Tis provides concise ways to create lists. Common applications includes making new lists, where each element is the result of some operation fulfilling certain conditions
+This provides concise ways to create lists. Common applications includes making new lists, where each element is the result of some operation fulfilling certain conditions
+Eg: 0-list_comprehension.py
+
+
+Tuples and Sequences
+A tuple consists of a number of values separated by commas
+Note: Tuples are immutable
+t[0] = 8888     #immutable
+
+But they contain mutuable objects
+t = ([1, 2, 3], [3, 2, 1])
+
+On output tuples are always enclosed in parentheses.
