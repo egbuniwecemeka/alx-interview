@@ -1,0 +1,55 @@
+Methods of the list objects
+
+list.append(x) - Adds an item to the end of a list. Same as a[len(a):] = [x]
+
+list.extend(iterable) - - Extend the list by appending all items from the iterable. Same as a[len(a)] = iterable
+
+list.insert(i, x ) - Insert an item at a given position. a.insert[0, x] -> insert at beginning of the list & a.insert(len(a), x) is same as a.append(x)
+
+list.remove(x) - Removes the first value from the list that equals x. ValueError if no such item
+
+list.pop([i]) - Removes the item at a given position. If no item is specified eg a.pop(), it returns and removes the last item
+
+list.clear - Removes all items from the list
+
+list.index(x[, start[, end]]) - returns the zero-based index from the list whose first items value equals x. ValueError if no such item is found
+Note: The optional arguments start and end are used as slice notations to limit search of sequence
+    The returned index is calculated relative to the beginning of the full sequence rather than the start argument
+
+list.count(x) - Returns the number of times x appears in a list.
+
+list.sort(*, key=None, reverse=False) - Sort the items of the list in place.
+
+list.reverse() - reverse the elements of the list in place
+
+list.copy() - Returns a shallow copy of the list
+
+Note: Methods that modify the list, have no return value. The return the default None. This is the design for all mutuable data structures in Python.
+
+
+Q1. List 11 List methods?
+
+
+Using Lists as Stacks (LIFO) - Last-In-First-Out
+
+The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved (“last-in, first-out”)
+
+>>> list = [1, 2]
+>>> list.append(3)
+>>> list
+[1, 2, 3]
+>>> list.pop()
+3
+>>> list
+[1, 2]
+
+Using Lists as Stacks (FIFO) - First-in-First-Out
+Lists are not efficient for this purpose. While appends and pops from the end of a list is fast, inserts and pops from the beginning of a list is slow
+This is because all other elements have rto be shifted by one.
+
+To implement a queue, use collections.deque which was designed to have fast appends and pops from both ends. For example: 0-queue_as_a_list.py
+
+
+List Comprehensions
+
+Tis provides concise ways to create lists. Common applications includes making new lists, where each element is the result of some operation fulfilling certain conditions

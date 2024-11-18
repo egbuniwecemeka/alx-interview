@@ -1,0 +1,83 @@
+Of course, Python doesn't use 8-bit numbers. It USED to use however many bits were native to your machine, 
+but since that was non-portable, it has recently switched to using an INFINITE number of bits.
+Thus the number -5 is treated by bitwise operators as if it were written "...1111111111111111111011".
+
+UTF-8 uses 1 to 4 bytes to represent characters:
+1 byte (8 bits) for standard ASCII characters (0–127).
+2 bytes for characters in many Latin-based languages with accents (128–2047).
+3 bytes for most characters in Asian scripts like Chinese, Japanese, and Korean (2048–65535).
+4 bytes for less common characters, historical scripts, and emojis (65536–1114111).
+
+x<<y - Returns x with the bits shifted to the left by y places. New bits on the right become zeros. Same as multiplying x * 2**y
+
+x>>y - Returns x with the bits shifted to the right by y places. . Same as //ing x by 2**y
+
+x & y - (Bitwise and) Returns the output of 1 if both corresponding bits of x and y is 1, otherwise it returns 0
+
+x | y - (Bitwise or) Returns the output of 1, if either bit of x or y is 1, otherwise it returns 0.
+
+~x - Returns the complement of x ie vice versa. Switches 1 for 0 and 0 for 1
+
+x^y - Returns a 1 if the bits of both x and y are different, but if they are same, it returns a 0.
+
+
+UTF-8 is a character encoding standard used for electronic communication.
+UTF-8 is capable of encoding all 1,112,064[2] valid Unicode code points using a variable-width encoding of one to four one-byte (8-bit) code units.
+It was designed for backward compatibility with ASCII: the first 128 characters of Unicode, which correspond one-to-one with ASCII, are encoded using a single byte with the same binary value as ASCII, so that a UTF-8-encoded file using only those characters is identical to an ASCII file. This is to say most software, built ASCII can read and write UTF-8. This yields fewer 
+
+UTF-1 - no clear distinction between ASCCI and non-ASCII characters
+
+Error handling
+Not all sequences of bytes are valid UTF-8. A UTF-8 decoder should be prepared for:
+
+Bytes that never appear in UTF-8: 0xC0, 0xC1, 0xF5–0xFF
+A "continuation byte" (0x80–0xBF) at the start of a character
+A non-continuation byte (or the string ending) before the end of a character
+An overlong encoding (0xE0 followed by less than 0xA0, or 0xF0 followed by less than 0x90)
+A 4-byte sequence that decodes to a value greater that U+10FFFF (0xF4 followed by 0x90 or greater)
+
+RFC 3629 states "Implementations of the decoding algorithm MUST protect against decoding invalid sequences. The Unicode Standard requires decoders to: "... treat any ill-formed code unit sequence as an error condition.
+
+The standard now recommends replacing each error with the replacement character "�" (U+FFFD) and continue decoding.
+
+
+October 8, 2003 by Joel Spolsky
+The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)
+
+ASCII which was able to represent every character using a number between 32 and 127. Space was 32, the letter “A” was 65, etc. This could conveniently be stored in 7 bits. Most computers in those days were using 8-bit bytes, so not only could you store every possible ASCII character, but you had a whole bit to spare, which, if you were wicked, you could use for your own devious purposes: people had their own ideas of what should go where in the space from 128 to 255.
+
+In the ANSI standard, everybody agreed on what to do below 128, which was pretty much the same as ASCII, different ways to handle the characters above 128 and so on were called code pages ie the same below 128 but different above 128. Languages needing different code pages/interpretation of high numbers, became an issue. Asian alphabets issue was solved with DBCS meaning "double byte character set". This also had the issue of ease in moving forward btu difficulty in moving backwards.
+
+Unicode
+
+Unicode was a brave effort to create a single character set that included every reasonable writing system on the planet
+
+A -> 0100 0001
+
+In Unicode, a letter mades to some bits stored in memory, this letter maps to what is called a code point
+
+Note: Every platonic letter in every alphabet is assigned a magic number eg U+0639 (U for Unicode, and the numbers hexadecimals). This magic number is called a code point
+
+Eg. Hello: This corresponds to 5 letters, and 5 code points U+0048 U+0065 U+006C U+006C U+006F.
+
+Encodings
+
+The earliest pratice of encoding was storing coding points in two bytes (UTF-16 or UCS-2). So the example above will be
+
+00 48 00 65 00 6C 00 6C 00 6F. Also it could be 48 00 65 00 6C 00 6C 00 6F 00. All these brought about the bizzare convention of storing a FE FF at the beginning of every Unicode string. This is called Unicode Byte Order Mark. All these led to Unicode being ignored until the invention of UTF-8.
+
+UTF-8
+
+UTF-8 was another system for storing your string of Unicode code points, those magic U+ numbers, in memory using 8 bit bytes.
+
+Note: In UTF-8, every code point from 0-127 is stored in a single byte. Only code points 128 and above are stored using 2, 3, in fact, up to 6 bytes.
+
+The Single Most Important Fact About Encodings
+
+ It does not make sense to have a string without knowing what encoding it uses. There Ain’t No Such Thing As Plain Text.
+
+ If you have a string, in memory, in a file, or in an email message, you have to know what encoding it is in or you cannot interpret it or display it to users correctly.
+
+ Standard ways of preserving the encoding a string uses:
+ Content-Type: text/plain; charset="UTF-8"
+ But that meta tag really has to be the very first thing in the <head> section because as soon as the web browser sees this tag it’s going to stop parsing the page and start over after reinterpreting the whole page using the encoding you specified.

@@ -4,10 +4,11 @@
 
 def validUTF8(data):
     """ Returns True if data is valid UTF-8 encoding, else returns False """
+    # tracks number of bytes to complete UTF-8 multi-byte character sequence
     num_bytes = 0
 
     for bytes in data:
-        # Mask to get the last 8 bits (a byte)
+        # Mask to get the last 8 bits (ones byte)
         bytes = bytes & 0xFF
 
         if num_bytes == 0:
