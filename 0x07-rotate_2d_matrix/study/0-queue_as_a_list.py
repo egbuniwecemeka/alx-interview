@@ -3,6 +3,7 @@
 
 from collections import deque
 
+
 queue = deque(['Nigeria', 'Lagos'])
 queue.append('Luxembourg')  # append to end of list
 queue.append('France')

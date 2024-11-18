@@ -64,4 +64,11 @@ t[0] = 8888     #immutable
 But they contain mutuable objects
 t = ([1, 2, 3], [3, 2, 1])
 
-On output tuples are always enclosed in parentheses.
+On output, tuples are always enclosed in parentheses.
+
+Sets
+A set is n unordered collection with no duplicaate elements.
+Basic usage includes membership tests and eliminating duplicate entries
+
+Note: To create an empty set, use set() not {} - as this creates an empty dictionary.
+
