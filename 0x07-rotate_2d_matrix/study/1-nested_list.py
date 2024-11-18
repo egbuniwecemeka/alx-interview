@@ -26,4 +26,4 @@ print(transposed_val)
 
 # del statement - removes an item from a list using its index instead of value
 del transposed[1]
-
+print(transposed)
