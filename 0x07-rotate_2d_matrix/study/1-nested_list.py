@@ -20,9 +20,10 @@ for i in range(4):
     transposed_row = []
     for row in matrix:
         transposed_row.append(row[i])
-    transposed.append(transposed_row)
+    transposed_val.append(transposed_row)
 
-print(transposed)
+print(transposed_val)
 
 # del statement - removes an item from a list using its index instead of value
 del transposed[1]
+
