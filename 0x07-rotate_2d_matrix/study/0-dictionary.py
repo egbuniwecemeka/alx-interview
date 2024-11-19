@@ -56,7 +56,7 @@ for i in sorted(basket):
 original_list = [[56.2, float('NaN'), 51.7, 55.3, 52.5, float('NaN'), 47.8]]
 non_nan = []
 for i in original_list:
-    if not math.nan(i):
+    if not math.isnan(i):
         non_nan.append(i)
 
 print(non_nan)
