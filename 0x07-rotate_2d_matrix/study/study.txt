@@ -67,8 +67,11 @@ t = ([1, 2, 3], [3, 2, 1])
 On output, tuples are always enclosed in parentheses.
 
 Sets
-A set is n unordered collection with no duplicaate elements.
+A set is n unordered collection with no duplicate elements.
 Basic usage includes membership tests and eliminating duplicate entries
 
 Note: To create an empty set, use set() not {} - as this creates an empty dictionary.
-
+dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys.
+Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key
+The main operations on a dictionary are storing a value with some key and extracting the value given the key. . If you store using a key that is already in use, the old value associated with that key is forgotten.
+Extrating a value with a non-existent key results in an error
