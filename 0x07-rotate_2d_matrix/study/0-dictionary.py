@@ -40,7 +40,7 @@ for i, v in enumerate(seq):
     print(i, v)
 
 # Loop through multiple sequences using the zip method.
-question = ['name']
-answer = ['Manchester United']
+question = ['best club', 'age', 'name']
+answer = ['Manchester United', 100, 'Ej']
 for q, a in zip(question, answer):
-    print(f'What is the {q} of your favourite club {a}')
+    print(f'What is your {q}? {a}')
