@@ -38,3 +38,9 @@ print(vals)
 seq = ['Officer', 'Artist', 'Doctor']
 for i, v in enumerate(seq):
     print(i, v)
+
+# Loop through multiple sequences using the zip method.
+question = ['name']
+answer = ['Manchester United']
+for q, a in zip(question, answer):
+    print(f'What is the {question[0]} favourite club{answer[0]}')
