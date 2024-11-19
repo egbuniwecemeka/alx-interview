@@ -44,3 +44,8 @@ question = ['best club', 'age', 'name']
 answer = ['Manchester United', 100, 'Ej']
 for q, a in zip(question, answer):
     print(f'What is your {q}? {a}')
+
+# looping through a sequence in sorted order
+basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+for i in sorted(basket):
+    print(i)
