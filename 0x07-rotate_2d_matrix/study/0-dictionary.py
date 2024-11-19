@@ -30,7 +30,11 @@ print(non_membership)
 create_dict = dict([('a', 1), ('b', 2), ('c', 3)])
 print(create_dict)
 
-# Looping techniques - the items() method can be used in retrieving keys and methods
-
+# Looping techniques - the items() method can be used in retrieving keys and methods in dictionaries
 vals = [(k, v) for k, v in create_dict.items()]
 print(vals)
+
+# When looping through a sequenence the position index and corresponding value can be retrieved using the enumerate() function
+seq = ['Officer', 'Artist', 'Doctor']
+for i, v in enumerate(seq):
+    print(i, v)
