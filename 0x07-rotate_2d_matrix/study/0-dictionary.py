@@ -31,3 +31,6 @@ create_dict = dict([('a', 1), ('b', 2), ('c', 3)])
 print(create_dict)
 
 # Looping techniques - the items() method can be used in retrieving keys and methods
+
+vals = [k for k, v in create_dict]
+print(vals)
