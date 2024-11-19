@@ -18,5 +18,10 @@ print(listed_contacts)
 sort = sorted(listed_contacts)
 print(sort)
 
+# test membership of key in dictionary
 test_membership = 'lawal' in sort
 print(test_membership)
+
+# test non-membership of key in dictionary
+non_membership = 'lawal' not in sort
+print(non_membership)
