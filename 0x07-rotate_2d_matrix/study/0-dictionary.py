@@ -43,4 +43,4 @@ for i, v in enumerate(seq):
 question = ['name']
 answer = ['Manchester United']
 for q, a in zip(question, answer):
-    print(f'What is the {question[0]} favourite club{answer[0]}')
+    print(f'What is the {q[0]} of your favourite club {a[1]}')
