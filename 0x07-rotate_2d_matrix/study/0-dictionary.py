@@ -11,4 +11,4 @@ contacts['samson'] = 789
 print(contacts)
 
 listed_contacts = list(contacts)
-print(contacts)
+print(listed_contacts)
