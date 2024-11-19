@@ -17,3 +17,6 @@ print(listed_contacts)
 # Sort the lists result
 sort = sorted(listed_contacts)
 print(sort)
+
+test_membership = 'lawal' in sort
+print(test_membership)
