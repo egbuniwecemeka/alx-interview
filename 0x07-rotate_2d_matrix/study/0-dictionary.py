@@ -10,5 +10,5 @@ del contacts['shola']
 contacts['samson'] = 789
 print(contacts)
 
-list(contacts)
+listed_contacts = list(contacts)
 print(contacts)
