@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Dictionary examples"""
 
+import math
+
 contacts = {'lawal': 801, 'emma': 234}
 contacts['shola'] = 456
 print(contacts)
@@ -49,3 +51,12 @@ for q, a in zip(question, answer):
 basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
 for i in sorted(basket):
     print(i)
+
+# It is not advisable to change the elements of a list while looping, but instead, create a new list
+original_list = [[56.2, float('NaN'), 51.7, 55.3, 52.5, float('NaN'), 47.8]]
+non_nan = []
+for i in original_list:
+    if not math.nan(i):
+        non_nan.append(i)
+
+print(non_nan)
