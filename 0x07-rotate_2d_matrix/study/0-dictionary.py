@@ -32,5 +32,5 @@ print(create_dict)
 
 # Looping techniques - the items() method can be used in retrieving keys and methods
 
-vals = [k for k, v in create_dict]
+vals = [k for k, v in create_dict.items()]
 print(vals)
