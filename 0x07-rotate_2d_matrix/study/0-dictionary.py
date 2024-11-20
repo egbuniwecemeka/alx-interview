@@ -64,3 +64,5 @@ print(non_nan)
 str1, str2, str3 = "", "DMD", "MD"
 or_val = str1 or str2 or str3
 print(or_val)
+
+# Comparing Sequences and Other Types
