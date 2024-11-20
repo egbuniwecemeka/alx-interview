@@ -11,9 +11,11 @@ def rotate_2d_matrix(matrix):
     """Rotates a n by n 2D matrix 90degrees clockwise"""
     n = len(matrix)
 
-    res = [matrix[i][j] for i in range(n) for j in range(i + 1, n)]
+    for i in range(n):
+        for j in range(i + 1, n):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
     
-    print(res)
+    print(matrix)
 
 
 if __name__ == "__main__":
