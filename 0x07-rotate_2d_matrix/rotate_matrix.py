@@ -16,6 +16,8 @@ def rotate_2d_matrix(matrix):
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
     
     print(matrix)
+    matrix.reverse()
+    print(matrix)
 
 
 if __name__ == "__main__":
