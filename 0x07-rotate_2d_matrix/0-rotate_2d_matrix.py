@@ -1,4 +1,4 @@
-#!/bin/usr/env python3
+#!/usr/bin/env python3
 """Rotate a 2D Matrix in a anti-clockwise direction"""
 
 # Naive approach - O(n^2) Time and O(n^2) Space
