@@ -51,7 +51,6 @@ basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
 for i in sorted(basket):
     print(i)
 
-# 
 # It is not advisable to change the elements of a list while looping, but instead, create a new list
 import math
 original_list = [56.2, float('NaN'), 51.7, 55.3, 52.5, float('NaN'), 47.8]
@@ -60,3 +59,8 @@ for i in original_list:
     if isinstance(i, (str, float)) and not math.isnan(i):
         non_nan.append(i)
 print(non_nan)
+
+# More on conditions
+str1, str2, str3 = "", "DMD", "MD"
+or_val = str1 or str2 or str3
+print(or_val)
