@@ -8,17 +8,18 @@
 # Example matrix[2][2] should be matrix[0][2]
 
 def rotate_2d_matrix(matrix):
-    """Rotates a n by n 2D matrix 90degrees clockwise"""
+    """Rotates a n by n 2D matrix 90degrees anti-clockwise"""
     n = len(matrix)
 
+    # Transpose the matrix
     for i in range(n):
         for j in range(i + 1, n):
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-    
-    print(matrix)
-    matrix.reverse()
-    print(matrix)
 
+    for i in len(n):
+        matrix[i].reverse()
+
+    print(matrix)
 
 if __name__ == "__main__":
     matrix = [[1, 2, 3],
