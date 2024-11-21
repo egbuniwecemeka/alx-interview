@@ -14,5 +14,5 @@ def rotate_2d_matrix(matrix):
     
     # Transposing rows and colums
     for i in range(n):
-        for j in range(n):
+        for j in range(i + 1, n):
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
