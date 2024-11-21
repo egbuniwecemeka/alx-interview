@@ -56,5 +56,7 @@ if __name__ == "__main__":
     
     rotate_2d_matrix(matrix)
     expected_2d_rotate(matrix)
-    
-    print(matrix)
+
+    for row in matrix:
+        print(" ".join(map(str, row)))
+        
