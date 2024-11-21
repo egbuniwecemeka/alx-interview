@@ -32,20 +32,20 @@ def rotate_2d_matrix(matrix):
 # Step by step movement of the outer boundary, elements will be moved in a boundary of 4, starting from the top most outer right element
 # Follow the below steps to solve the problem
 
-def expected_2d_rotate(matrix):
+def expected_2d_rotate(mat):
     """Expected approach 2D matrix rotation"""
     
     # there are n/2 squares or cycles in a matrix of side n. Run a loop to traverse the matrix a cycle at a time.
-    n = len(matrix)
+    n = len(mat)
 
     # Tranverse the matrix a cycle at a time
     for i in range(n//2):
         for j in range(i, n - i - 1):
-            temp = matrix[i][j]
-            matrix[i][j] = matrix[j][n - 1 - i]
-            matrix[j][n - 1 - i] = matrix[n - 1 - i][n - 1 - j]
-            matrix[n - 1 - i][n - 1 - j] = matrix[n - 1 - j][i]
-            matrix[n - 1 - j][i] = temp
+            temp = mat[i][j]
+            mat[i][j] = mat[j][n - 1 - i]
+            mat[j][n - 1 - i] = mat[n - 1 - i][n - 1 - j]
+            mat[n - 1 - i][n - 1 - j] = mat[n - 1 - j][i]
+            mat[n - 1 - j][i] = temp
 
 
 if __name__ == "__main__":
@@ -59,4 +59,3 @@ if __name__ == "__main__":
 
     for row in matrix:
         print(" ".join(map(str, row)))
-        
