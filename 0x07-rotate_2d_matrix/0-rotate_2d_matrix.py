@@ -13,12 +13,16 @@ def rotate_2d_matrix(matrix):
     """Rotates a n by n 2D matrix 90degrees anti-clockwise"""
     n = len(matrix)
 
-    # Transpose the matrix
-    for i in range(n):
-        for j in range(i + 1, n):
-            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+    # Initialize the result matrix with zeros
+    res = [[0] * n for _ in range(n)]
 
+    # Flip matrix counterclockwise with nested loops
     for i in range(n):
-        matrix[i].reverse()
+        for j in range(n):
+            res[n-j-1][i] = matrix[i][j]
 
-    print(matrix)
+    # Update the original matrix
+    for i in range(n):
+        for j in range(n):
+            matrix[i][j] = res[i][j]
+
