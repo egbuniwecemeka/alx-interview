@@ -5,9 +5,10 @@
 def rotate_2d_matrix(matrix):
     """Rotates a n by n 2D matrix 90degrees anti-clockwise"""
 
+    # Reverse rows
     matrix.reverse()
 
-    n  = len(matrix)
+    n = len(matrix)
 
     # Transposing rows and colums
     for i in range(n):
