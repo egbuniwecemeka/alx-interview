@@ -55,7 +55,6 @@ if __name__ == "__main__":
               [13, 14, 15, 16]
               ]
     
-    rotate_2d_matrix(matrix)
     expected_2d_rotate(matrix)
 
     for row in matrix:
