@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """A python script that determines the least coins needed for a given total"""
 
-def makeChange(coins: int, total: int) -> int:
+from typing import List
+
+def count(coins: List[int], n: int, total: int) -> int:
     """Returns fewest number of coins needed to meet the total"""
-    n = len(coins)
     # Base case 1: If total is 0. THere's only a single way to do this
     # i.e. by not chosing any coins
     if total == 0:
@@ -16,11 +17,14 @@ def makeChange(coins: int, total: int) -> int:
         print(-1)
         return -1
     
-    
-    print(f'n: {n}')
+    # Recurrence relation
+    return count(coins, total - coins[n - 1]) + count(coins, n - 1, total)
 
-
+def makeChange(coins, total):
+    """Returns fewest number of coins needed to meet the total"""
+    return count(coins, len(coins), total)
 
 if __name__ == "__main__":
     coins = [1, 2, 5, 4]
-    makeChange(coins, -5)
+    total = 10
+    makeChange(coins, total)
