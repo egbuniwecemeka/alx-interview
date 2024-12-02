@@ -13,7 +13,7 @@ def makeChange(coins: int, total: int) -> int:
     # Base case 2: If total is negative or no coins are left to consider
     # i.e n === coins.length
     if total < 0 or n == 0:
-        print(0)
+        print(-1)
         return -1
     
     
