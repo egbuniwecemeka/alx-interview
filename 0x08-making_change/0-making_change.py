@@ -8,13 +8,11 @@ def count(coins: List[int], n: int, total: int) -> int:
     # Base case 1: If total is 0. THere's only a single way to do this
     # i.e. by not chosing any coins
     if total == 0:
-        print(0)
         return 0
     
     # Base case 2: If total is negative or no coins are left to consider
     # i.e n === coins.length
     if total < 0 or n == 0:
-        print(-1)
         return -1
     
     # Recurrence relation
