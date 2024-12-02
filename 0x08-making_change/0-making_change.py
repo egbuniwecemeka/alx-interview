@@ -18,7 +18,7 @@ def count(coins: List[int], n: int, total: int) -> int:
         return -1
     
     # Recurrence relation
-    return count(coins, total - coins[n - 1]) + count(coins, n - 1, total)
+    return count(coins, n, total - coins[n - 1]) + count(coins, n - 1, total)
 
 def makeChange(coins, total):
     """Returns fewest number of coins needed to meet the total"""
