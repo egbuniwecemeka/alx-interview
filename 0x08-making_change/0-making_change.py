@@ -14,10 +14,10 @@ def makeChange(coins: int, total: int) -> int:
     if total < 0 or n == 0:
         return -1
     
-    print(f'n: ${n}')
+    print(f'n: {n}')
 
 
 
 if __name__ == "__main__":
-    coins = [1,2,5]
+    coins = [1, 2, 5, 4]
     makeChange(coins, 10)
