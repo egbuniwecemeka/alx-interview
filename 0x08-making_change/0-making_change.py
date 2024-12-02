@@ -20,4 +20,4 @@ def makeChange(coins: int, total: int) -> int:
 
 if __name__ == "__main__":
     coins = [1, 2, 5, 4]
-    makeChange(coins, 0)
+    makeChange(coins, -1)
