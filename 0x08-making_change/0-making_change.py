@@ -15,3 +15,9 @@ def makeChange(coins: int, total: int) -> int:
         return -1
     
     print(f'n: ${n}')
+
+
+
+if __name__ == "__main__":
+    coins = [1,2,5]
+    makeChange(coins, 10)
