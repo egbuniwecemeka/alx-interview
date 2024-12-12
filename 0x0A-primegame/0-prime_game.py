@@ -3,7 +3,7 @@
 from typing import List
 
 def isPrime(array: List[int]):
-    if array <= 0:
+    if array < 0:
         return 'Negative'
     for i in range(2, int(array**2) + 1):
         # If num is even (multiple of 2)
