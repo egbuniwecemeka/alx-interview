@@ -2,7 +2,7 @@
 """"""
 from typing import List
 
-def isPrime(array: List):
+def isPrime(array: int):
     if array < 0:
         return 'Negative'
     for i in range(2, int(array**2) + 1):
