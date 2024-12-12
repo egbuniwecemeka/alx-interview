@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """A script """
 from typing import List
+from math import sqrt
 
 def isPrime(nums: List[int]) -> List[int]:
     """ Returns a list of prime numbers from a list of integers
@@ -14,7 +15,7 @@ def isPrime(nums: List[int]) -> List[int]:
         if n <= 0:
             print('Input a positive integer')
         
-        for i in range(2, int(n**2) + 1):
+        for i in range(2, int(sqrt(n)) + 1):
             if n % i == 0:
                 return False
         return True
