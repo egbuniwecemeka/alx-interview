@@ -11,10 +11,8 @@ def isPrime(nums: List[int]) -> List[int]:
     """
     integers = [num for num in nums]
 
-    if integers <= 0:
-        return False
-    else:
-        return True
+    for i in range(2, int(integers**2) + 1):
+        return i
     
 
     
