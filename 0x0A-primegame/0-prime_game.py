@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """A script that selects the winner of a game of prime numbers"""
 
 def isWinner(x, nums):
