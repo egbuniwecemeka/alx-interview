@@ -1,19 +1,15 @@
 #!/usr/bin/env python3
-""""""
+"""A script """
 from typing import List
 
 def isPrime(nums: List[int]) -> List[int]:
-    def isprime(n: int) -> bool:
-        # Check if n is negative
-        if n <= 0:
-            return False
-        
-        for i in range(2, int(n**2) + 1):
-            if n % i == 0:
-                return False
-            return True
-    
-    return [num for num in nums if isprime(num)]
+    """ Returns a list of prime numbers from a list of integers
+        Args:
+            nums - A list of integers
+        Returns:
+            A list of prime numbers
+    """
+    return [num for num in nums]
     
 
 if __name__ == "__main__":
