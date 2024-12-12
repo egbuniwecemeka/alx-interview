@@ -2,15 +2,14 @@
 """"""
 from typing import List
 
-def isPrime(nums: List[int]):
-    for num in nums:
-        # Check if i is less than one
-        if num <= 0:
-            return 'Negative'
+def isPrime(array: List[int]):
+    if array <= 0:
+        return 'Negative'
+    for i in range(2, int(array**2) + 1):
         # If num is even (multiple of 2)
         if num % 2 == 0:
             return 'Even'
-        return num
+    return array
     
 
 if __name__ == "__main__":
