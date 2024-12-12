@@ -14,7 +14,7 @@ def isWinner(x, nums):
     """
     if x < 1 or not nums:
         return None
-    
+
     # Find the maxium number in nums for prime sieve
     max_num = max(nums)
 
@@ -25,7 +25,7 @@ def isWinner(x, nums):
         if is_prime[1]:
             for multiple in range(i * i, max_num + 1, i):
                 is_prime[multiple] = False
-    
+
     # Precompute the number of primes up to each number
     primes_count = [0] * (max_num + 1)
     for i in range(1, max_num + 1):
@@ -40,7 +40,7 @@ def isWinner(x, nums):
             ben_wins += 1
         else: # Maria wins if the count is odd
             maria_wins += 1
-    
+
     if maria_wins > ben_wins:
         return 'Maria'
     elif ben_wins > maria_wins:
