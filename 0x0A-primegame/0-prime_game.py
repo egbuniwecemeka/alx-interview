@@ -9,7 +9,7 @@ def isPrime(nums: List[int]) -> List[int]:
             return False
         
         for i in range(2, int(n**2) + 1):
-            if i % 2 == 0:
+            if n % i == 0:
                 return False
             return True
     
