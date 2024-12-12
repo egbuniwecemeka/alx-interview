@@ -9,7 +9,14 @@ def isPrime(nums: List[int]) -> List[int]:
         Returns:
             A list of prime numbers
     """
-    return [num for num in nums]
+    integers = [num for num in nums]
+
+    if integers <= 0:
+        return False
+    else:
+        return True
+    
+
     
 
 if __name__ == "__main__":
